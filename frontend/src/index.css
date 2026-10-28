@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: #FAFAFA;
+  color: #0A0A0A;
+  font-family: Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+/* flow connector in the rooms diagram */
+.flow-on { stroke: #0A0A0A; filter: drop-shadow(0 0 4px rgba(0,0,0,0.35)); }
+.flow-off { stroke: #D4D4D4; }
+
+/* scrollbars */
+::-webkit-scrollbar { height: 8px; width: 8px; }
+::-webkit-scrollbar-thumb { background: #D4D4D4; border-radius: 8px; }
+
+/* horizontal pill rows on phones: swipeable, no visible scrollbar */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-flowpulse, .animate-spin { animation: none; }
+}
